@@ -1,0 +1,36 @@
+function startPrank() {
+    const screen = document.getElementById("screen");
+    const message = document.getElementById("message");
+
+    screen.innerHTML = "";
+    message.textContent = "";
+
+    const lines = [
+        "[DEMO] Starting visual simulation...",
+        "[DEMO] Loading cyber terminal...",
+        "[DEMO] Checking imaginary firewall...",
+        "[DEMO] Scanning fictional network...",
+        "[DEMO] Analyzing demo data...",
+        "[DEMO] Generating random security report...",
+        "[DEMO] Running visual effects...",
+        "[DEMO] Almost complete...",
+        "[DEMO] Preparing final report...",
+        "[DEMO] Simulation finished!"
+    ];
+
+    let i = 0;
+
+    const timer = setInterval(() => {
+        screen.innerHTML += lines[i] + "<br><br>";
+        i++;
+
+        if (i >= lines.length) {
+            clearInterval(timer);
+
+            message.textContent = "😂 JUST A PRANK!";
+
+            screen.innerHTML +=
+                "<br>This was only a .visual simulation. No phone was scanned or hacked.";
+        }
+    }, 3000);
+}2
